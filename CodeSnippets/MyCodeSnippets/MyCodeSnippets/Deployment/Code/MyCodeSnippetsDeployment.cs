@@ -19,7 +19,7 @@ namespace MyCodeSnippets.Deployment.Code
                 try
                 {
                     string dest = Path.Combine(destPath, Path.GetFileName(file));
-                    File.Copy(file, dest);
+                    File.Copy(file, dest,true);
                 }
                 catch (Exception ex)
                 {

@@ -75,6 +75,9 @@
     <None Include="Snippets\prop_child.snippet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Snippets\test_class_bdd.snippet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Snippets\test_class.snippet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
