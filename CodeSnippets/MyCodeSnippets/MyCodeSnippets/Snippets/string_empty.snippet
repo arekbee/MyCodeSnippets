@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>string_empty</Title>
+			<Shortcut>string_empty</Shortcut>
+			<Description>Code snippet for string IsNullOrEmpty</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>nullString</ID>
+					<Default>"string"</Default>
+					<ToolTip>String</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if (string.IsNullOrEmpty($nullString$) == false)
+                                        {
+                                            $selected$ $end$;
+                                        }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

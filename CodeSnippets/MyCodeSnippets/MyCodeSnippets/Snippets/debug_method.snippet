@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>debug_method</Title>
+			<Shortcut>debug_method</Shortcut>
+			<Description>Code snippet for debug method</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>methodnameexpression</ID>
+					<ToolTip>Method evaluate</ToolTip>
+					<Default>MethodName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[Conditional("DEBUG")]
+private void  DEBUG_$methodnameexpression$ ()   //hack: Debug
+	{
+		if (Debugger.IsAttached)
+        {
+	       $selected$$end$
+	  }
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>string_const</Title>
+			<Shortcut>string_const</Shortcut>
+			<Description>Code snippet for contant string </Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>qString</ID>
+					<Default>qString</Default>
+					<ToolTip>String Name</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>stringValue</ID>
+					<Default>"str"</Default>
+					<ToolTip>String value</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[private const string $qString$ =@"$stringValue$";$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

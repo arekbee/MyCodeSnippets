@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>if_if</Title>
+			<Shortcut>if_if</Shortcut>
+			<Description>Code snippet for two if statement</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expressionIf1</ID>
+					<ToolTip>Expression to evaluate</ToolTip>
+					<Default>true</Default>
+				</Literal>
+				<Literal>
+					<ID>expressionIf2</ID>
+					<ToolTip>Expression to evaluate</ToolTip>
+					<Default>true</Default>
+				</Literal>
+				<Literal>
+					<ID>expressionError</ID>
+					<ToolTip>Expression to evaluate</ToolTip>
+					<Default>string</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[bool isPassed=false;
+if ($expressionIf1$)
+	{
+		if($expressionIf2$)
+		{
+			isPassed=true;
+			$selected$ 
+			$end$
+		}
+	}
+
+if(isPassed == false)
+{
+	gLogger.Fatal("$expressionError$");
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

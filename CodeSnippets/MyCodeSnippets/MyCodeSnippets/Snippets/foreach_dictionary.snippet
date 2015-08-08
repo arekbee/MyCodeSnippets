@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>foreach_dictionary</Title>
+			<Shortcut>foreach_dictionary</Shortcut>
+			<Description>Code snippet for foreach statement</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>dictionary</ID>
+					<ToolTip>Name of collection or array to iterate through</ToolTip>
+					<Default>collection</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if ($dictionary$ != null  && $dictionary$.Any()) 
+            {
+				foreach (var $dictionary$Key in $dictionary$.Keys)
+				{
+					try	
+					{
+						var $dictionary$Value = $dictionary$[$dictionary$Key];
+						if($dictionary$Value!= null)
+						{
+							$selected$ 	$end$
+						}
+					}
+					catch(Exception ex)
+					{
+						gLogger.Error("Getting value from dictionary on Key:"+$dictionary$Key , ex);
+					}
+				}
+            }
+			else
+			{
+				gLogger.Fatal("Dictionary $dictionary$ is null or empty");
+			}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

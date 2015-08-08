@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>prop_session_class</Title>
+			<Shortcut>prop_session_class</Shortcut>
+			<Description>Code snippet for an automatically implemented property class for Session</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Function>ClassName()</Function>
+					<Default>ClaaName</Default>
+				</Literal>
+				<Literal>
+					<ID>propertyname</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>MyProperty</Default>
+				</Literal>
+				<Literal>
+					<ID>propertynumber</ID>
+					<ToolTip>number</ToolTip>
+					<Default>0</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[public $type$ $propertyname$
+        {
+            get
+            {
+                  if (Session["$propertyname$_$type$_$propertynumber$"] == null)
+			{
+                    Session["$propertyname$_$type$_$propertynumber$"] = new $type$();
+                  }
+			if(Session["$propertyname$$propertynumber$"] is $type$)
+			{
+				return ($type$) Session["$propertyname$_$type$_$propertynumber$"];
+			}
+                  return default($type$);
+            }
+            private set
+            {
+                Session["$propertyname$_$type$_$propertynumber$"] = value;
+            }
+        }   
+$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

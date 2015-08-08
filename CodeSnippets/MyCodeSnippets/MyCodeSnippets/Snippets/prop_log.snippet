@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>prop_log</Title>
+			<Shortcut>prop_log</Shortcut>
+			<Description>Code snippet for an automatically implemented property</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>MyProperty</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[public $type$ $property$ { 
+			get
+			{
+				return _$property$;
+			} 
+			set
+			{
+				var tValue = _$property$;
+				_$property$ = value;
+				if(tValue !=  null)
+				{
+					gLogger.Debug("Variable $property$ change from value: " + tValue.ToString() + " to value: " + _$property$.ToString());
+				} 	
+				else
+				{
+					gLogger.Debug("To variable $property$ assigned value: " + _$property$.ToString());
+				}
+			}
+			}
+			private $type$ _$property$;$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

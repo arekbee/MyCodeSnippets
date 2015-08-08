@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>try</Title>
+			<Shortcut>try</Shortcut>
+			<Description>Code snippet for try catch</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Exception type</ToolTip>
+					<Function>SimpleTypeName(global::System.Exception)</Function>
+				</Literal>
+				<Literal>
+					<ID>expressionErrorString</ID>
+					<ToolTip>Message string type</ToolTip>
+					<Function>SimpleTypeName(global::System.String)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[try 
+	{	        
+		$selected$$end$
+	}
+	catch ($expression$ ex)
+	{
+		gLogger.Error("$expressionErrorString$",ex);
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

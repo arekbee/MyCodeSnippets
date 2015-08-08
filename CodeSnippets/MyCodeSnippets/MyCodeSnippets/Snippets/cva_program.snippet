@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>cva_program</Title>
+			<Shortcut>cva_program</Shortcut>
+			<Description>Code snippet for test method</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Reflection</Namespace>
+		  <Namespace>CVA.Trade.Common.Logging</Namespace>
+		  <Namespace>log4net</Namespace>
+        </Import>
+      </Imports>
+      <References>
+        <Reference>
+          <Assembly>CVA.Trade.Base.dll</Assembly>
+          <Assembly>log4net.dll</Assembly>
+        </Reference>
+      </References>
+			<Declarations>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$selected$$end$
+			private static readonly ILog Log =  LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+			
+			private static void InitializeLogging()
+        {
+            var executingAssembly = Assembly.GetExecutingAssembly();
+            var loggingParameters = LogUtils.InitializeLoggingWith(executingAssembly, Log);
+
+            Log.InfoFormat("Started {0}. Version={1}. CVA Configuration={2}.",
+                           loggingParameters.ServiceName, loggingParameters.DllVersion,
+                           loggingParameters.CvaConfiguration);
+        }]]></Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

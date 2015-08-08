@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>contains</Title>
+			<Shortcut>contains</Shortcut>
+			<Description>Code snippet for contains </Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>collection </ID>
+					<ToolTip>Expression to evaluate</ToolTip>
+					<Default>collection</Default>
+				</Literal>
+				<Literal>
+					<ID>item</ID>
+					<ToolTip>Expression to evaluate</ToolTip>
+					<Default>item</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if ($collection$ != null && $collection$.ContainsKey($item$))
+            {
+                $selected$ $end$
+            }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

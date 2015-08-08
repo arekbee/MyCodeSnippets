@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>throw_argnull</Title>
+			<Shortcut>throw_argnull</Shortcut>
+			<Description>Code snippet for throwing argument is null Exception</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>variable</ID>
+					<ToolTip>variable</ToolTip>
+					<Default>value</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if ($variable$ == null)
+{
+ throw new ArgumentNullException("Object $variable$ is NULL");
+}
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

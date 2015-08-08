@@ -15,26 +15,25 @@
 			<Declarations>
 				<Literal>
 					<ID>classname</ID>
-					<ToolTip>Method evaluate</ToolTip>
-					<Default>MethodName</Default>
+					<ToolTip>Scenario</ToolTip>
+					<Default>create_a_constructor</Default>
 				</Literal>
+				<Literal>
+					<ID>SubjectUnderTest</ID>
+					<ToolTip>Subject that we will test</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				
 			</Declarations>
-			<Code Language="csharp">
-        <![CDATA[[Category("BDD_$classname$")]
-    [TestFixture]
-    public class when_we_run_special_methods : InstanceSpecification<$classname$>
-    {
-        protected override $classname$ Create_subject_under_test()
-        {
-            return new $classname$();
-        }
-
-        [Test]
-        public void It_should_do_special_stuff()
-        {
-            SubjectUnderTest$selected$$end$
-        }
-    }]]>
+			<Code Language="csharp"><![CDATA[[Category("BDD_$SubjectUnderTest$")]
+public class when_we_$classname$: InstanceSpecification<$SubjectUnderTest$>
+{
+	protected override $SubjectUnderTest$ Create_subject_under_test()
+	{
+	  return new $SubjectUnderTest$($selected$$end$);
+	}
+}			
+]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>foreach_foreach</Title>
+			<Shortcut>foreach_foreach</Shortcut>
+			<Description>Code snippet for 2 foreach statement</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>identifier1</ID>
+					<ToolTip>Identifier that represents the element in the collection</ToolTip>
+					<Default>item1</Default>
+				</Literal>
+				<Literal>
+					<ID>identifier2</ID>
+					<ToolTip>Identifier that represents the element in the collection</ToolTip>
+					<Default>item2</Default>
+				</Literal>
+				<Literal>
+					<ID>collection1</ID>
+					<ToolTip>Name of collection or array to iterate through</ToolTip>
+					<Default>collection</Default>
+				</Literal>
+				<Literal>
+					<ID>collection2</ID>
+					<ToolTip>Name of collection or array to iterate through</ToolTip>
+					<Default>collection</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if ($collection1$ != null && $collection2$!= null)
+            {
+                var $collection2$Enumerator = $collection2$.GetEnumerator();
+                foreach (var $identifier1$ in $collection1$)
+                {
+                    if ($collection2$Enumerator.MoveNext())
+                    {
+                        var $identifier2$ = $collection2$Enumerator.Current;
+						$selected$ $end$
+                    }
+			   else
+			   {
+				break;
+			   }
+                }
+            }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>for_for</Title>
+			<Shortcut>for_for</Shortcut>
+			<Description>Code snippet for 2 'for' loop</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>index1</ID>
+					<Default>i</Default>
+					<ToolTip>Index</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>index2</ID>
+					<Default>j</Default>
+					<ToolTip>Index</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>max1</ID>
+					<Default>length</Default>
+					<ToolTip>Max length</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>max2</ID>
+					<Default>length</Default>
+					<ToolTip>Max length</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[for (int $index1$ = 0; $index1$ < $max1$; $index1$++)
+			{
+				for (int $index2$ = 0; $index2$ < $max2$; $index2$++)
+				{
+					$selected$ $end$
+				}
+			}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

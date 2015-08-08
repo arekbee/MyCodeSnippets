@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>if_notempty</Title>
+			<Shortcut>if_notempty</Shortcut>
+			<Description>Code snippet for if statement</Description>
+			<Author>Arkadiusz Beer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<ToolTip>Expression to evaluate</ToolTip>
+					<Default>""</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if (string.IsNullOrEmpty($expression$) == false)
+			{
+				$selected$ $end$
+			}
+			else
+			{
+				gLogger.Debug("$expression$ is Empty string");
+			}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
